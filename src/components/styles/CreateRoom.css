@@ -1,0 +1,101 @@
+/* Container styles */
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #4299e1, #805ad5);
+}
+
+/* Form wrapper styles */
+.form-wrapper {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Button group styles */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+/* Action button styles */
+.action-button {
+    width: 48%;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.action-button.active {
+    background-color: #4299e1;
+    color: white;
+}
+
+.action-button:not(.active) {
+    background-color: #e2e8f0;
+    color: #4a5568;
+}
+
+/* Form title styles */
+.form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Form label styles */
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+    font-weight: bold;
+}
+
+/* Form input styles */
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+/* Submit button styles */
+.submit-button {
+    width: 100%;
+    background-color: #4299e1;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+    outline: none;
+}
+
+.submit-button:hover {
+    background-color: #3182ce;
+}
