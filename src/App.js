@@ -15,6 +15,19 @@ const App = () => {
     const navigate = useNavigate();
     const location = useLocation();
     
+    const closeChat = async () => {
+        if (connection) {
+            try {
+                await connection.stop();
+                navigate("/");
+            } catch (error) {
+                console.log("Error closing chat: ", error);
+            } finally {
+                setConnection(null);
+            }
+        }
+    };
+    
     useEffect(() => {
         const handleRouteChange = () => {
             if (location.pathname !== "/chat" && connection) {
@@ -26,7 +39,7 @@ const App = () => {
         return () => {
             handleRouteChange();
         };
-    }, [location.pathname,connection]);
+    }, [location.pathname,connection,closeChat]);
 
     const createRoom = async (roomName, password) => {
         try {
@@ -87,18 +100,7 @@ const App = () => {
         }
     };
 
-    const closeChat = async () => {
-        if (connection) {
-            try {
-                await connection.stop();
-                navigate("/");
-            } catch (error) {
-                console.log("Error closing chat: ", error);
-            } finally {
-                setConnection(null);
-            }
-        }
-    };
+    
 
     return (
         <div className="min-h-screen">
