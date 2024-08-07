@@ -43,7 +43,7 @@ const App = () => {
 
     const createRoom = async (roomName, password) => {
         try {
-            const response = await fetch("https://localhost:7264/api/Room/rooms", {
+            const response = await fetch("https://real-chat20240807131154.azurewebsites.net/api/Room/rooms", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
