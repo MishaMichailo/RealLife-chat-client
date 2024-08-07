@@ -26,7 +26,7 @@ const App = () => {
         return () => {
             handleRouteChange();
         };
-    }, [location.pathname]);
+    }, [location.pathname,connection]);
 
     const createRoom = async (roomName, password) => {
         try {
