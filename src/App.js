@@ -43,14 +43,13 @@ const App = () => {
 
     const createRoom = async (roomName, password) => {
         try {
-            const response = await fetch("https://real-chat20240807131154.azurewebsites.net/api/Room/rooms", {
+            const response = await fetch("https://localhost:7264/api/Room/rooms", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ roomName, password })
+                body: JSON.stringify({ Name: roomName, Password: password })
             });
-
             if (response.ok) {
                 setNotification("Room created successfully!");
                 navigate("/"); 
