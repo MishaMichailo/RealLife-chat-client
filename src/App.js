@@ -48,7 +48,7 @@ const App = () => {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ Name: roomName, Password: password })
+                body: JSON.stringify({ RoomName: roomName, Password: password })
             });
             if (response.ok) {
                 setNotification("Room created successfully!");
